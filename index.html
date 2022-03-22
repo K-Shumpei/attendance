@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+    <body>
+    <table id="table" border="1">
+        <tr><th>名前</th><th>出席回数</th><th></th></tr>
+    </table>
+
+    <hr>
+
+    <div id="registerButton">
+        <input type="button" value="新規登録" onclick="inputName()">
+    </div>
+    <div id="register">
+        <form id="registerForm" action="">
+            <input id="newPlayer" autocapitalize="off" placeholder="名前を入力"><button>登録</button>
+        </form>
+        <input type="button" value="戻る" onclick="cancelRegister()">
+    </div>
+
+    <div id="deleteButton">
+        <input type="button" value="名前の削除" onclick="deleteName()">
+    </div>
+    <div id="delete">
+        <table id="deleteTable" border="1"></table>
+        <input type="button" value="戻る" onclick="cancelDelete()">
+    </div>
+    
+    <script>
+        document.getElementById("register").style.display = "none"
+        document.getElementById("delete").style.display = "none"
+    </script>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+    </body>
+
+</html>
